@@ -50,7 +50,6 @@ class HomeScreen extends StatelessWidget {
                   ],
                 ),
                 RaisedButton(
-                  child: const Text('Review friend requests'),
                   onPressed: () {
                     if (bloc.navigateUsingDeepLink) {
                       router.openDeepLink<void>(Uri.parse(
@@ -59,9 +58,9 @@ class HomeScreen extends StatelessWidget {
                       router.toFriendRequests(numberOfRequests: 5);
                     }
                   },
+                  child: const Text('Review friend requests'),
                 ),
                 RaisedButton(
-                  child: const Text('Compose a message'),
                   onPressed: () async {
                     String text;
 
@@ -84,6 +83,7 @@ class HomeScreen extends StatelessWidget {
                       );
                     }
                   },
+                  child: const Text('Compose a message'),
                 ),
                 const SizedBox(height: 48),
                 const Text(
